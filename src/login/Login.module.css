@@ -1,0 +1,20 @@
+.login {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid gray;
+    padding: 32px;
+}
+
+.actions {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 8px;
+
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

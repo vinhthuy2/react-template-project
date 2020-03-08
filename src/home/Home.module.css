@@ -1,0 +1,33 @@
+li {
+    list-style-type: none;
+    display: inline;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+ul {
+    text-decoration: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+.container {
+    display: flex;
+    background-color: gray;
+    align-items: center;
+}
+
+.logo {
+    flex: 4
+}
+
+.logo h2 {
+    margin-left: 16px;
+}
+
+.navigation {
+    flex: 1;
+}
