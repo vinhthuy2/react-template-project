@@ -1,0 +1,39 @@
+li {
+  list-style-type: none;
+  display: inline;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+ul {
+  text-decoration: none;
+  display: flex;
+  justify-content: space-around;
+}
+
+.container {
+  display: flex;
+  background-color: gray;
+  align-items: center;
+  height: 64px;
+  justify-content: center;
+  position: fixed;
+  width: 100%;
+}
+
+.container nav {
+  display: flex;
+  width: 90%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+}
+
+.navigation {
+  width: 25%;
+}

@@ -1,28 +1,28 @@
-import React, { useState } from "react";
-import * as classes from "./Login.module.css";
-import axios from "axios";
+import React, { useState } from 'react';
+import * as classes from './Login.module.css';
+import axios from 'axios';
 
 const Login = props => {
-  const [username, setUserName] = useState("");
-  const [password, setPassword] = useState("");
+  const [username, setUserName] = useState('');
+  const [password, setPassword] = useState('');
   const onLoginClick = e => {
     e.preventDefault();
-    // alert('login clicked!')
-    console.log(username, password);
-
     axios
       .post(
-        "http://localhost:3001/api/user/login",
+        'http://localhost:3001/api/user/login',
         {
           email: username,
           password: password
         },
-        { responseType: "application/json" }
+        { responseType: 'application/json' }
       )
       .then(token => {
-        localStorage.setItem("token", token.data);
-        props.history.push(props.match.url);
-        // console.log(props.match.url);
+        localStorage.setItem('token', token.data.token);
+        if (props.location.state && props.location.state.from) {
+          props.history.push(props.location.state.from);
+        } else {
+          props.history.push('/');
+        }
       })
       .catch(err => console.log(err));
   };
