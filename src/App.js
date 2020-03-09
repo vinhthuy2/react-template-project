@@ -1,5 +1,5 @@
 import React from "react";
-import { Switch } from "react-router";
+import { Switch, Redirect } from "react-router";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Login from "./login/Login";
 import "./App.css";
@@ -19,6 +19,7 @@ function App() {
         <Route path="/home" exact>
           <Home></Home>
         </Route>
+        <Redirect path="/" exact to="/home" />
       </Switch>
     </Router>
   );
